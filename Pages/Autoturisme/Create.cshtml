@@ -1,0 +1,45 @@
+﻿@page
+@model Antonia_Cozma_Examen.Pages.Autoturisme.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Autoturism</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Autoturism.Model" class="control-label"></label>
+                <input asp-for="Autoturism.Model" class="form-control" />
+                <span asp-validation-for="Autoturism.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Autoturism.An" class="control-label"></label>
+                <input asp-for="Autoturism.An" class="form-control" />
+                <span asp-validation-for="Autoturism.An" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Autoturism.Pret" class="control-label"></label>
+                <input asp-for="Autoturism.Pret" class="form-control" />
+                <span asp-validation-for="Autoturism.Pret" class="text-danger"></span>
+            </div>
+            <div class="form-group"> <label asp-for="Autoturism.PretID" class="control-label">Pret</label> <select asp-for="Autoturism.PretID" class="form-control" asp-items="ViewBag.PretID"> </select> <span asp-validation-for="Autoturism.PretID" class="text-danger"></span> </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

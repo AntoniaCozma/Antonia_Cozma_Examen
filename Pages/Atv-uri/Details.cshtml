@@ -1,0 +1,37 @@
+﻿@page
+@model Antonia_Cozma_Examen.Pages.Atv_uri.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Atv</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Atv.Model)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Atv.Model)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Atv.An)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Atv.An)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Atv.Pret)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Atv.Pret)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Atv?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
